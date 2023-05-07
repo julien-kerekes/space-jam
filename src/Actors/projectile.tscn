@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2yj1xus2jpth"]
 
 [ext_resource type="Script" path="res://src/Actors/projectile.gd" id="1_16y1l"]
-[ext_resource type="Texture2D" uid="uid://die3wsruggym0" path="res://Assets/coin.png" id="2_xum4i"]
+[ext_resource type="Texture2D" uid="uid://b32ei4pvriwlo" path="res://Assets/pngwing.com.png" id="2_so8su"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hxhbb"]
-radius = 33.0151
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p2f7"]
+size = Vector2(6, 28)
 
 [node name="Projectile" type="Area2D"]
 collision_layer = 4
@@ -12,10 +12,14 @@ collision_mask = 3
 script = ExtResource("1_16y1l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xum4i")
+position = Vector2(0, -15)
+rotation = -1.56947
+scale = Vector2(0.0228784, 0.0311319)
+texture = ExtResource("2_so8su")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_hxhbb")
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_6p2f7")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

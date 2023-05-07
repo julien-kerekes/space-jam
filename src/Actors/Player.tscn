@@ -1,16 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd5jtfxsvmgxn"]
 
 [ext_resource type="PackedScene" uid="uid://60m5tpej3g2w" path="res://src/Actors/characters_base.tscn" id="1_fxbfk"]
-[ext_resource type="Texture2D" uid="uid://027fhwa3l7d7" path="res://Assets/player.png" id="1_j5mlf"]
+[ext_resource type="Texture2D" uid="uid://ikj2pjdvgu82" path="res://Assets/Rocket.png" id="2_4y4ds"]
 
 [sub_resource type="GDScript" id="GDScript_m6xek"]
 script/source = "extends \"res://src/Actors/characters_base.gd\"
 
-
-
 func _process(delta):
 	super._process(delta)
-	if(null == projectile && Input.is_action_just_pressed(\"shoot\")):
+	if(Input.is_action_just_pressed(\"shoot\")):
 		shoot(-1)
 
 func  _physics_process(delta):
@@ -20,17 +18,18 @@ func  _physics_process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53ms0"]
-size = Vector2(95, 88)
+size = Vector2(58.5, 80)
 
 [node name="CharacterBody2D" groups=["Player"] instance=ExtResource("1_fxbfk")]
-position = Vector2(280, 446)
+position = Vector2(280, 448)
 collision_layer = 1
 collision_mask = 32772
 script = SubResource("GDScript_m6xek")
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("1_j5mlf")
+scale = Vector2(0.1, 0.093)
+texture = ExtResource("2_4y4ds")
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(-0.5, 4)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_53ms0")

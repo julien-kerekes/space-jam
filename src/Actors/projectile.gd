@@ -2,7 +2,7 @@ extends Area2D
 
 var speed := 4
 var direction := -1
-@export var exists := false
+var player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,8 @@ func _process(delta):
 	position.y += speed*self.direction
 
 func destroy():
-	exists=false
+	if player != null:
+		player.active_projectiles -= 1
 	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
