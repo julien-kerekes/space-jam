@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdsnc36r1j6fq"]
+
+[ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_28orh"]
+[ext_resource type="PackedScene" uid="uid://bd5jtfxsvmgxn" path="res://src/Actors/Player.tscn" id="1_hetql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ijur"]
+size = Vector2(1154, 3)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_b2nev"]
+b = Vector2(0, 644)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_28orh")
+
+[node name="Player" parent="." instance=ExtResource("1_hetql")]
+position = Vector2(118, 535)
+collision_mask = 32768
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 1111.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 24.0
+
+[node name="LifeLabel" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 41.0
+offset_bottom = 24.0
+
+[node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 32769
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(577, 642.5)
+shape = SubResource("RectangleShape2D_2ijur")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("SegmentShape2D_b2nev")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
+position = Vector2(1152, 0)
+shape = SubResource("SegmentShape2D_b2nev")

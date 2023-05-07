@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2yj1xus2jpth"]
+
+[ext_resource type="Script" path="res://src/Actors/projectile.gd" id="1_16y1l"]
+[ext_resource type="Texture2D" uid="uid://die3wsruggym0" path="res://Assets/coin.png" id="2_xum4i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxhbb"]
+radius = 33.0151
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_16y1l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xum4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hxhbb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

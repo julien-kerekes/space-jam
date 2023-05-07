@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0mdey5gqtowi"]
+
+[ext_resource type="Script" path="res://src/Actors/Fruit.gd" id="1_n0tpf"]
+[ext_resource type="Texture2D" uid="uid://b5u5330xqkshd" path="res://Assets/bumper.png" id="2_7mkhp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxhbb"]
+radius = 16.0312
+
+[node name="Fruit" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_n0tpf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.300433, 0.348323)
+texture = ExtResource("2_7mkhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hxhbb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

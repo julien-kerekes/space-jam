@@ -1,0 +1,12 @@
+res://src/Actors/projectile.tscn
+res://src/Levels/Label.gd
+res://src/Levels/Level.tscn
+res://src/Actors/Player.tscn
+res://src/Actors/characters_base.tscn
+res://src/Actors/Enemy.tscn
+res://src/Actors/Fruit.tscn
+res://src/Actors/projectile.gd
+res://src/Actors/Enemy.gd
+res://src/Actors/characters_base.gd
+res://src/Actors/Fruit.gd
+res://src/Levels/Level.gd
