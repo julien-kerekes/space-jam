@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdsnc36r1j6fq"]
+[gd_scene load_steps=8 format=3 uid="uid://bdsnc36r1j6fq"]
 
 [ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_28orh"]
 [ext_resource type="PackedScene" uid="uid://bd5jtfxsvmgxn" path="res://src/Actors/Player.tscn" id="1_hetql"]
+[ext_resource type="Texture2D" uid="uid://b5ig0ouk2n54j" path="res://Assets/night-sky.jpg" id="2_85kwv"]
+[ext_resource type="Script" path="res://src/Levels/LifeLabel.gd" id="4_ipwnn"]
+[ext_resource type="Theme" uid="uid://c07dos753inof" path="res://src/Themes/hpbar2.tres" id="5_5ifxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ijur"]
 size = Vector2(1154, 3)
@@ -11,6 +14,13 @@ b = Vector2(0, 644)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_28orh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_right = 1154.0
+offset_bottom = 644.0
+texture = ExtResource("2_85kwv")
+stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_hetql")]
 position = Vector2(328, 574)
@@ -23,10 +33,11 @@ offset_right = 1151.0
 offset_bottom = 24.0
 
 [node name="LifeLabel" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 41.0
-offset_bottom = 24.0
+offset_left = 33.0
+offset_top = 11.0
+offset_right = 73.0
+offset_bottom = 34.0
+script = ExtResource("4_ipwnn")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 collision_layer = 32769
@@ -41,3 +52,13 @@ shape = SubResource("SegmentShape2D_b2nev")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
 position = Vector2(1152, 0)
 shape = SubResource("SegmentShape2D_b2nev")
+
+[node name="hpBar" type="ProgressBar" parent="."]
+offset_left = 31.0
+offset_top = 34.0
+offset_right = 369.0
+offset_bottom = 69.0
+theme = ExtResource("5_5ifxb")
+max_value = 3.0
+value = 3.0
+show_percentage = false

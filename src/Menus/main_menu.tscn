@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://rg38xvi7alx0"]
+
+[ext_resource type="FontFile" uid="uid://djva8vvmou1tm" path="res://Assets/ui/Voyager Heavy.otf" id="1_h7gjb"]
+[ext_resource type="FontFile" uid="uid://c2yelue3qpvj2" path="res://Assets/ui/Voyager Light.otf" id="1_kas3y"]
+[ext_resource type="Texture2D" uid="uid://cdsqt5fy64k6e" path="res://Assets/background.png" id="3_e6xys"]
+[ext_resource type="Texture2D" uid="uid://dmelmnyji0uah" path="res://Assets/main_menu/SPACJEAM LOGO.png" id="4_afmev"]
+
+[sub_resource type="Theme" id="Theme_djp8l"]
+default_font = ExtResource("1_kas3y")
+/fonts/VoyagerHeavy = ExtResource("1_h7gjb")
+/fonts/VoyagerLight = ExtResource("1_kas3y")
+
+[sub_resource type="GDScript" id="GDScript_mb80r"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$VBoxContainer/btStart.grab_focus()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_bt_start_pressed():
+	get_tree().change_scene_to_file(\"res://src/Levels/Level.tscn\")
+
+
+func _on_bt_options_pressed():
+	#var options = load(\"res://src/Menus/Options.tscn\").instance()
+	#get_tree().current_scene.add_child(options)
+	pass
+
+
+func _on_bt_quit_pressed():
+	get_tree().quit()
+"
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_djp8l")
+script = SubResource("GDScript_mb80r")
+
+[node name="imgMenuBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+texture = ExtResource("3_e6xys")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="imgLogo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 130.0
+offset_right = 948.0
+offset_bottom = 220.0
+texture = ExtResource("4_afmev")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.997
+anchor_bottom = 0.999
+offset_left = 129.0
+offset_top = -280.056
+offset_right = 280.0
+offset_bottom = -101.352
+grow_vertical = 0
+theme_override_constants/separation = 23
+
+[node name="btStart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.28
+focus_neighbor_top = NodePath("../btQuit")
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+text = "Start"
+flat = true
+alignment = 0
+
+[node name="btOptions" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+text = "Options"
+flat = true
+alignment = 0
+
+[node name="btQuit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_neighbor_bottom = NodePath("../btStart")
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="VBoxContainer/btStart" to="." method="_on_bt_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/btOptions" to="." method="_on_bt_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/btQuit" to="." method="_on_bt_quit_pressed"]
