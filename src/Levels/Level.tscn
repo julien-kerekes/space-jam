@@ -59,6 +59,5 @@ offset_top = 34.0
 offset_right = 369.0
 offset_bottom = 69.0
 theme = ExtResource("5_5ifxb")
-max_value = 3.0
-value = 3.0
+max_value = 0.0
 show_percentage = false

@@ -4,6 +4,8 @@ extends Node2D
 @export var Fruit00 : PackedScene = preload("res://src/Actors/Fruit.tscn")
 var enemy
 var fruit
+func _ready():
+	$hpBar.max_value = $Player.hp
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

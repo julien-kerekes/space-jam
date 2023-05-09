@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu1fave5mtr5p"]
+[gd_scene load_steps=6 format=3 uid="uid://cu1fave5mtr5p"]
 
 [ext_resource type="PackedScene" uid="uid://60m5tpej3g2w" path="res://src/Actors/characters_base.tscn" id="1_avweg"]
 [ext_resource type="Script" path="res://src/Actors/Enemy.gd" id="2_7ojq2"]
 [ext_resource type="Texture2D" uid="uid://cobhyvnktp881" path="res://Assets/enemy.png" id="3_11iqg"]
+[ext_resource type="Theme" uid="uid://43r7tyd5miuc" path="res://src/Themes/enemy_hpbar.tres" id="4_r2pr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqlo"]
 size = Vector2(109, 93)
@@ -21,3 +22,12 @@ texture = ExtResource("3_11iqg")
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_jwqlo")
+
+[node name="hpBar" type="ProgressBar" parent="." index="2"]
+offset_left = -54.0
+offset_top = 47.0
+offset_right = 55.0
+offset_bottom = 64.0
+theme = ExtResource("4_r2pr6")
+theme_override_constants/outline_size = 0
+show_percentage = false
