@@ -1,11 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://c02fdjq5gbri4"]
+[gd_scene load_steps=5 format=3 uid="uid://c02fdjq5gbri4"]
 
 [ext_resource type="PackedScene" uid="uid://bdsnc36r1j6fq" path="res://src/Levels/Level.tscn" id="1_fgm4u"]
 [ext_resource type="PackedScene" uid="uid://cu1fave5mtr5p" path="res://src/Actors/Enemy.tscn" id="2_v4tg2"]
 [ext_resource type="Script" path="res://src/Levels/Level1.gd" id="2_ysi2t"]
+[ext_resource type="Texture2D" uid="uid://b8acd7adpsc2h" path="res://Assets/stars-in-the-night-sky.jpg" id="3_ib8qk"]
 
 [node name="Node2D" instance=ExtResource("1_fgm4u")]
 script = ExtResource("2_ysi2t")
+
+[node name="TextureRect" parent="." index="0"]
+offset_right = 1152.0
+offset_bottom = 639.0
+texture = ExtResource("3_ib8qk")
+expand_mode = 1
+stretch_mode = 0
 
 [node name="LifeLabel" parent="." index="3"]
 visible = false

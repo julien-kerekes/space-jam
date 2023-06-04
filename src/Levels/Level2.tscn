@@ -6,5 +6,10 @@
 [node name="Node2D" instance=ExtResource("1_ntn5f")]
 script = ExtResource("2_l4qsi")
 
+[node name="TextureRect" parent="." index="0"]
+offset_right = 1153.0
+offset_bottom = 641.0
+expand_mode = 1
+
 [node name="Enemy" parent="." index="6"]
 max_projectiles = 1

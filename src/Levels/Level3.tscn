@@ -7,6 +7,10 @@
 [node name="Node2D" instance=ExtResource("1_m8781")]
 script = ExtResource("2_8qo7c")
 
+[node name="TextureRect" parent="." index="0"]
+offset_right = 1160.0
+offset_bottom = 654.0
+
 [node name="Enemy" parent="." index="6"]
 position = Vector2(88, 117)
 hp = 3
