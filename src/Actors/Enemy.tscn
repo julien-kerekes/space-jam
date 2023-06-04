@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://43r7tyd5miuc" path="res://src/Themes/enemy_hpbar.tres" id="4_r2pr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqlo"]
-size = Vector2(109, 93)
+size = Vector2(110, 56)
 
 [node name="Enemy" instance=ExtResource("1_avweg")]
 position = Vector2(48, 595)
@@ -20,14 +20,14 @@ scale = Vector2(0.212885, 0.187157)
 texture = ExtResource("3_pv88v")
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0.5, -0.5)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_jwqlo")
 
 [node name="hpBar" type="ProgressBar" parent="." index="2"]
 offset_left = -54.0
-offset_top = 47.0
+offset_top = 28.0
 offset_right = 55.0
-offset_bottom = 64.0
+offset_bottom = 45.0
 theme = ExtResource("4_r2pr6")
 theme_override_constants/outline_size = 0
 show_percentage = false

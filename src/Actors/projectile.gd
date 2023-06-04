@@ -1,8 +1,9 @@
 extends Area2D
 
-var speed := 4
+var speed := 10
 var direction := -1
 var player
+var dt := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +14,10 @@ func dir(dir): #y:-1 = up 1 = down
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.y += speed*self.direction
+	dt+=delta
+	if dt >= 1.0/60:
+		dt = 0.0 
+		position.y += speed*self.direction
 
 func destroy():
 	if player != null:

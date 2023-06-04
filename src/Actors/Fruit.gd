@@ -1,8 +1,12 @@
 extends Area2D
 var speed := 2
+var dt := 0.0
 
 func _process(delta):
-	position.y += speed
+	dt+=delta
+	if dt >= 1.0/60: 
+		dt = 0.0 
+		position.y += speed
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):

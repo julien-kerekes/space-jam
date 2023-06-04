@@ -2,7 +2,6 @@
 
 [ext_resource type="FontFile" uid="uid://djva8vvmou1tm" path="res://Assets/ui/Voyager Heavy.otf" id="1_h7gjb"]
 [ext_resource type="FontFile" uid="uid://c2yelue3qpvj2" path="res://Assets/ui/Voyager Light.otf" id="1_kas3y"]
-[ext_resource type="Texture2D" uid="uid://cdsqt5fy64k6e" path="res://Assets/background.png" id="3_e6xys"]
 [ext_resource type="Texture2D" uid="uid://dmelmnyji0uah" path="res://Assets/main_menu/SPACJEAM LOGO.png" id="4_afmev"]
 
 [sub_resource type="Theme" id="Theme_djp8l"]
@@ -38,6 +37,9 @@ func _on_bt_quit_pressed():
 	get_tree().quit()
 "
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqd7k"]
+load_path = "res://.godot/imported/background.png-c6e0edb6ae00a576ddf31b14f0c4bf17.ctex"
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -52,7 +54,7 @@ script = SubResource("GDScript_mb80r")
 layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 647.0
-texture = ExtResource("3_e6xys")
+texture = SubResource("CompressedTexture2D_yqd7k")
 expand_mode = 1
 stretch_mode = 1
 
