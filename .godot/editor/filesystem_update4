@@ -22,3 +22,7 @@ res://src/Levels/LevelManager.gd
 res://src/Levels/EndlessLevel.tscn
 res://src/Actors/Enemy.gd
 res://EndlessLevel.gd
+res://Game_Over.gd
+res://src/Menus/Game_Over.tscn
+res://src/Actors/Fruit.gd
+res://src/Actors/characters_base.gd

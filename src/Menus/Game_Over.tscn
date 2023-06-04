@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvm5rjn32evcf"]
+
+[ext_resource type="Texture2D" uid="uid://bynwqsv0vjgaa" path="res://Assets/background.png" id="1_51rdu"]
+[ext_resource type="Script" path="res://Game_Over.gd" id="1_ky1vq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 650.0
+texture = ExtResource("1_51rdu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 141.0
+offset_top = 1.0
+offset_right = 1005.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0.580392, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_ky1vq")

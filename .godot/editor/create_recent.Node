@@ -1,6 +1,7 @@
+TextureRect
+Label
 Node
 ProgressBar
-TextureRect
 Button
 VBoxContainer
 MarginContainer
@@ -8,7 +9,6 @@ CollisionShape2D
 StaticBody2D
 Area2D
 TileMap
-Label
 RichTextLabel
 Window
 VisibleOnScreenNotifier2D

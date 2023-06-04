@@ -5,3 +5,6 @@
 
 [node name="Node2D" instance=ExtResource("1_v4yk1")]
 script = ExtResource("2_xx3kl")
+
+[node name="LifeLabel" parent="." index="3"]
+visible = false

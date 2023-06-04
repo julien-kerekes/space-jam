@@ -13,7 +13,7 @@ func _process(delta):
 		$LifeLabel.text = str($Player.hp)
 		$hpBar.value = $Player.hp
 	else:
-		$LifeLabel.text = "0"
+		get_tree().change_scene_to_file("res://src/Menus/Game_Over.tscn")
 
 func save_player_hp():
 	GameManager.player_hp = $Player.hp

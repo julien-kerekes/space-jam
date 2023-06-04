@@ -7,6 +7,9 @@
 [node name="Node2D" instance=ExtResource("1_fgm4u")]
 script = ExtResource("2_ysi2t")
 
+[node name="LifeLabel" parent="." index="3"]
+visible = false
+
 [node name="Enemy" parent="." index="6" instance=ExtResource("2_v4tg2")]
 position = Vector2(506, 117)
 motion_mode = 1
