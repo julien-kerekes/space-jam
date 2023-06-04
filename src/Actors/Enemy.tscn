@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqlo"]
 size = Vector2(110, 56)
 
-[node name="Enemy" instance=ExtResource("1_avweg")]
+[node name="Enemy" groups=["Enemy"] instance=ExtResource("1_avweg")]
 position = Vector2(48, 595)
 collision_layer = 2
 collision_mask = 4

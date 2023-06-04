@@ -24,7 +24,7 @@ func _process(delta):
 
 
 func _on_bt_start_pressed():
-	get_tree().change_scene_to_file(\"res://src/Levels/Level.tscn\")
+	get_tree().change_scene_to_file(\"res://src/Levels/Level1.tscn\")
 
 
 func _on_bt_options_pressed():

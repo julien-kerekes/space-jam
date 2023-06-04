@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c02fdjq5gbri4"]
+
+[ext_resource type="PackedScene" uid="uid://bdsnc36r1j6fq" path="res://src/Levels/Level.tscn" id="1_fgm4u"]
+[ext_resource type="PackedScene" uid="uid://cu1fave5mtr5p" path="res://src/Actors/Enemy.tscn" id="2_v4tg2"]
+[ext_resource type="Script" path="res://src/Levels/Level1.gd" id="2_ysi2t"]
+
+[node name="Node2D" instance=ExtResource("1_fgm4u")]
+script = ExtResource("2_ysi2t")
+
+[node name="Enemy" parent="." index="6" instance=ExtResource("2_v4tg2")]
+position = Vector2(506, 117)
+motion_mode = 1
+hp = 5
+max_projectiles = 0
