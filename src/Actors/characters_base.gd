@@ -18,4 +18,5 @@ func shoot(dir):
 		self.projectile.scale = self.scale
 		self.projectile.global_position = Vector2(self.global_position.x ,self.global_position.y-self.get_child(0).texture.get_size().y*(-dir)*self.scale.y*self.get_child(0).scale.y)
 		get_tree().current_scene.add_child(self.projectile)
+		$sfxBasicProjectile.play()
 		self.active_projectiles += 1

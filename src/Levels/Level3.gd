@@ -10,4 +10,7 @@ func _process(delta):
 	super._process(delta)
 	if GameManager.score == 5:
 		save_player_hp()
+		#$sfxCountdown.play()
+		#await $sfxCountdown.play().completed
+		#await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file("res://src/Levels/EndlessLevel.tscn")

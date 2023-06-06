@@ -4,6 +4,9 @@ var speed := 10
 var direction := -1
 var player
 var dt := 0.0
+var audio_player = AudioStreamPlayer2D.new()
+var sound_path = "res://Assets/levels/projectile_hit.wav"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,4 +33,8 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 func _on_body_entered(body):
 	if body.is_in_group("Characters"):
 		body.hp -= 1
+		#audio_player.stream = ResourceLoader.load(sound_path)
+		#audio_player.play()
+		#sfxProjectileHit
+		$sfxBasicHit.play()
 		destroy()

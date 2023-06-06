@@ -1,14 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqovqqa17jth7"]
+[gd_scene load_steps=3 format=3 uid="uid://bqovqqa17jth7"]
 
 [ext_resource type="PackedScene" uid="uid://bdsnc36r1j6fq" path="res://src/Levels/Level.tscn" id="1_v4yk1"]
 [ext_resource type="Script" path="res://EndlessLevel.gd" id="2_xx3kl"]
-[ext_resource type="Texture2D" uid="uid://b8acd7adpsc2h" path="res://Assets/stars-in-the-night-sky.jpg" id="3_drlm2"]
 
 [node name="Node2D" instance=ExtResource("1_v4yk1")]
 script = ExtResource("2_xx3kl")
 
 [node name="TextureRect" parent="." index="0"]
-texture = ExtResource("3_drlm2")
 expand_mode = 1
 stretch_mode = 0
 

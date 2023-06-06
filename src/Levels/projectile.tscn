@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b38i5fs3i684f"]
+
+[ext_resource type="Script" path="res://src/Actors/projectile.gd" id="1_16y1l"]
+[ext_resource type="Texture2D" uid="uid://b32ei4pvriwlo" path="res://Assets/pngwing.com.png" id="2_so8su"]
+[ext_resource type="AudioStream" uid="uid://c68vfovggqjms" path="res://Assets/levels/projectile_hit.wav" id="3_uq4xk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p2f7"]
+size = Vector2(6, 28)
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_16y1l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+rotation = -1.56947
+scale = Vector2(0.0228784, 0.0311319)
+texture = ExtResource("2_so8su")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_6p2f7")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="sfxBasicHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_uq4xk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

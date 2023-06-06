@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtv8pvllo5nji"]
+[gd_scene load_steps=5 format=3 uid="uid://dtv8pvllo5nji"]
 
 [ext_resource type="PackedScene" uid="uid://c02fdjq5gbri4" path="res://src/Levels/Level1.tscn" id="1_ntn5f"]
 [ext_resource type="Script" path="res://src/Levels/Level2.gd" id="2_l4qsi"]
+[ext_resource type="AudioStream" uid="uid://dkawkgkdqbteq" path="res://Assets/levels/game over.wav" id="3_1g13m"]
+[ext_resource type="AudioStream" uid="uid://be1ys54guxtva" path="res://Assets/levels/baseprojectile_shoot.wav" id="4_smpc7"]
 
 [node name="Node2D" instance=ExtResource("1_ntn5f")]
 script = ExtResource("2_l4qsi")
@@ -9,7 +11,12 @@ script = ExtResource("2_l4qsi")
 [node name="TextureRect" parent="." index="0"]
 offset_right = 1153.0
 offset_bottom = 641.0
-expand_mode = 1
 
 [node name="Enemy" parent="." index="6"]
 max_projectiles = 1
+
+[node name="sfxGameOver" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("3_1g13m")
+
+[node name="sfxBaseHit" parent="." index="10"]
+stream = ExtResource("4_smpc7")
