@@ -8,7 +8,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	super._process(delta)
-	if GameManager.score == 5:
+	if GameManager.kills == 5:
 		save_player_hp()
 		#$sfxCountdown.play()
 		#await $sfxCountdown.play().completed

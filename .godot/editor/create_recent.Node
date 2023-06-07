@@ -1,5 +1,6 @@
 AudioStreamPlayer
 AudioStreamPlayer2D
+Timer
 TextureRect
 Label
 Node

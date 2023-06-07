@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpgbs20xf8pna"
+path="res://.godot/imported/short enemy explosion.wav-f795b5a41ea7e3701f1559ba44d1bf66.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/missilesandexplosions/short enemy explosion.wav"
+dest_files=["res://.godot/imported/short enemy explosion.wav-f795b5a41ea7e3701f1559ba44d1bf66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

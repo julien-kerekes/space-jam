@@ -9,6 +9,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	super._process(delta)
-	if GameManager.score == 2:
+	if GameManager.kills == 2:
 		save_player_hp()
 		get_tree().change_scene_to_file("res://src/Levels/Level3.tscn")

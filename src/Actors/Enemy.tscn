@@ -36,3 +36,5 @@ show_percentage = false
 [node name="sfxEnemyBoom" type="AudioStreamPlayer" parent="." index="3"]
 stream = ExtResource("5_r8464")
 volume_db = -1.873
+
+[connection signal="tree_exiting" from="Sprite2D" to="." method="_on_sprite_2d_tree_exiting"]

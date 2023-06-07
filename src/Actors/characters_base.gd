@@ -1,17 +1,16 @@
 extends CharacterBody2D
 @export var Projectile : PackedScene = preload("res://src/Actors/projectile.tscn")
-@export var speed := 500.0
+
 @export var hp := 3
-@export var max_projectiles := 1
 var active_projectiles := 0
 var projectile
 
 func _process(delta):
-	if(self.hp == 0):
+	if(self.hp <= 0):
 		queue_free()
 
 func shoot(dir):
-	if(self.active_projectiles < self.max_projectiles):
+	if(self.active_projectiles < GameManager.max_projectiles):
 		self.projectile = Projectile.instantiate()
 		self.projectile.dir(dir)
 		self.projectile.player = self

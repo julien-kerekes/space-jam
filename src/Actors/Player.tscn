@@ -13,7 +13,7 @@ func _process(delta):
 
 func  _physics_process(delta):
 	var direction := Input.get_action_strength(\"move_right\") - Input.get_action_strength(\"move_left\")
-	velocity = Vector2(speed*direction,1000)
+	velocity = Vector2(GameManager.speed*direction,1000)
 	move_and_slide()
 "
 

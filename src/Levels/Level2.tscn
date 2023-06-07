@@ -12,11 +12,8 @@ script = ExtResource("2_l4qsi")
 offset_right = 1153.0
 offset_bottom = 641.0
 
-[node name="Enemy" parent="." index="6"]
-max_projectiles = 1
-
 [node name="sfxGameOver" type="AudioStreamPlayer" parent="." index="8"]
 stream = ExtResource("3_1g13m")
 
-[node name="sfxBaseHit" parent="." index="10"]
+[node name="sfxBaseHit" parent="." index="11"]
 stream = ExtResource("4_smpc7")

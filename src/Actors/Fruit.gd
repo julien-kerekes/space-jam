@@ -1,6 +1,16 @@
 extends Area2D
 var speed := 2
 var dt := 0.0
+var texturePath
+
+#@export var Enemy : PackedScene = preload("res://src/Actors/Enemy.tscn")
+#@export var char : PackedScene = preload("res://src/Actors/characters_base.tscn")
+#@export var player : PackedScene = preload("res://src/Actors/Player.tscn")
+#@export var levels : PackedScene = preload("res://src/Levels/Level.tscn")
+#@export var player : PackedScene = preload("res://src/Actors/Player.tscn")
+var labelNode 
+var fruitlabel
+
 
 # different fruit textures
 var textures = [
@@ -35,7 +45,6 @@ var powerups = {
 	"res://Assets/fruits/0013_Solarmelon.png" : "Solarmelon"
 }
 
-
 func _process(delta):
 	dt+=delta
 	if dt >= 1.0/60: 
@@ -44,8 +53,45 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		if body.hp < 3:
-			body.hp += 1
+		var powerup = powerups[texturePath]
+		#print("powerup: "+powerup)
+		#print("texturepath: "+texturePath)
+		match (powerup):
+			"Astroberry":
+				GameManager.max_projectiles += 1
+			"Celestia":
+				$sfxExtraLife.play()
+				$sfxExtraLife2D.play()
+				if body.hp < 3:
+					body.hp += 1
+			"Cometberry":
+				GameManager.score+=5
+				$sfxExtraLife2D.play()
+			"Cosmango":
+				GameManager.speed+=50
+			"Galapple": 
+				$sfxExtraLife2D.play()
+				GameManager.atkspeed += 2
+			"Holeberry":
+				body.scale *= 0.95				
+			"Lunaberry":
+				GameManager.enemyatkspeed *= 0.9
+			"Meteorange":
+				GameManager.atkspeed += 2
+			"Nebulime":
+				GameManager.enemyspeed *= 0.9
+			"Orbinana":
+				body.scale *= 0.95
+			"Skyberry":
+				GameManager.speed+=50
+			"Solarmelon":
+				#sun shield
+				$sfxSunShield.play()
+				pass
+			"Starberry":
+				GameManager.max_projectiles += 1
+		print(powerup +" eingesammelt!")
+		#fruitlabel.text = powerup +" eingesammelt!"
 		queue_free()
 
 
@@ -54,9 +100,10 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 func _ready():
 	#zufällige Frucht generieren
+	#var labelNode = get_node("res://src/Levels/Level.tscn")
+	#var Fruitlabel = labelNode.get_node("Fruitlabel")
 	var textureIndex = randi() % textures.size()
-	var texturePath = textures[textureIndex]
+	texturePath = textures[textureIndex]
 	var texture = load(texturePath)
 	$Sprite2D.texture = texture
-	
-	pass # Replace with function body.
+	$sfxTakeBerry.play()

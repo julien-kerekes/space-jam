@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dva5vi8egd5mo"
+path="res://.godot/imported/laser ZAP hit.wav-3cc470b0e63cf079c5d7697f0b4b5b2e.sample"
+
+[deps]
+
+source_file="res://Assets/sfx/missilesandexplosions/laser ZAP hit.wav"
+dest_files=["res://.godot/imported/laser ZAP hit.wav-3cc470b0e63cf079c5d7697f0b4b5b2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,11 +1,10 @@
 extends Area2D
 
-var speed := 10
 var direction := -1
 var player
 var dt := 0.0
-var audio_player = AudioStreamPlayer2D.new()
-var sound_path = "res://Assets/levels/projectile_hit.wav"
+var speed := 10
+var enemyspeed := 8
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +19,11 @@ func _process(delta):
 	dt+=delta
 	if dt >= 1.0/60:
 		dt = 0.0 
-		position.y += speed*self.direction
+		if(self.direction == 1):
+			position.y += GameManager.enemyatkspeed*self.direction
+		elif(self.direction == -1):
+			position.y += GameManager.atkspeed*self.direction
+		
 
 func destroy():
 	if player != null:
@@ -33,8 +36,4 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 func _on_body_entered(body):
 	if body.is_in_group("Characters"):
 		body.hp -= 1
-		#audio_player.stream = ResourceLoader.load(sound_path)
-		#audio_player.play()
-		#sfxProjectileHit
-		$sfxBasicHit.play()
 		destroy()

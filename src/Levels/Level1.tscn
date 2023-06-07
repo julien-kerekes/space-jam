@@ -20,4 +20,3 @@ visible = false
 position = Vector2(506, 117)
 motion_mode = 1
 hp = 5
-max_projectiles = 0
