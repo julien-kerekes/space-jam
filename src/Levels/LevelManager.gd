@@ -15,12 +15,12 @@ func _process(delta):
 	else:
 		$LifeLabel.text = "0"
 	
-	if GameManager.score == 1:
+	if GameManager.kills == 1:
 		GameManager.player_hp = $Player.hp
 		get_tree().change_scene_to_file("res://src/Levels/Level2.tscn")
-	elif GameManager.score == 2:
+	elif GameManager.kills == 2:
 		GameManager.player_hp = $Player.hp
 		get_tree().change_scene_to_file("res://src/Levels/Level3.tscn")
-	elif GameManager.score == 6:
+	elif GameManager.kills == 5:
 		GameManager.player_hp = $Player.hp
 		get_tree().change_scene_to_file("res://src/Levels/EndlessLevel.tscn")

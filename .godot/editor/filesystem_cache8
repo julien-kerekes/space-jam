@@ -1,9 +1,9 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686103525
+::res://::1686125854
 EndlessLevel.gd::GDScript::-1::1686103034::0::1::::<>Node<>::
 export_presets.cfg::TextFile::-1::1683592223::0::1::::<><>::
-GameManager.gd::GDScript::-1::1686103525::0::1::::<>Node<>::
-Game_Over.gd::GDScript::-1::1686098598::0::1::::<>Label<>::
+GameManager.gd::GDScript::-1::1686105328::0::1::::<>Node<>::
+Game_Over.gd::GDScript::-1::1686105678::0::1::::<>Label<>::
 icon.svg::CompressedTexture2D::4901535659741421145::1683480684::1683480684::1::::<><>::
 Projectile.gd::GDScript::-1::1683480684::0::1::::<>Node2D<>::
 README.md::TextFile::-1::1683480684::0::1::::<><>::
@@ -64,7 +64,7 @@ extraprojectile.wav::AudioStreamWAV::6503622056044393063::1496476402::1686105002
 faster.wav::AudioStreamWAV::8284153454122379459::1496475284::1686105002::1::::<><>::
 shrink.wav::AudioStreamWAV::5112278892574054576::1496474790::1686105002::1::::<><>::
 sunshield.wav::AudioStreamWAV::2096196681321196075::1496476192::1686104836::1::::<><>::
-::res://Assets/sfx/misc/::1686105065
+::res://Assets/sfx/misc/::1686105182
 Retro_8-Bit_Game-Alarm_Bell_01.wav::AudioStreamWAV::511930264703628310::1496478026::1686105181::1::::<><>::
 Retro_8-Bit_Game-Alarm_Bell_02.wav::AudioStreamWAV::637373080839204950::1496478056::1686105181::1::::<><>::
 Retro_8-Bit_Game-Alarm_Bell_04-Loop.wav::AudioStreamWAV::4370516527837986330::1496478270::1686105182::1::::<><>::
@@ -80,7 +80,7 @@ Retro_8-Bit_Game-Powerup_Achievement_03.wav::AudioStreamWAV::682103734753270972:
 Retro_8-Bit_Game-Powerup_Achievement_04.wav::AudioStreamWAV::6137529908108912054::1496476792::1686105182::1::::<><>::
 Retro_8-Bit_Game-Powerup_Achievement_07.wav::AudioStreamWAV::624094049942716883::1496476920::1686105182::1::::<><>::
 Retro_8-Bit_Game-Powerup_Achievement_26.wav::AudioStreamWAV::5717299619470006278::1496477722::1686105182::1::::<><>::
-::res://Assets/sfx/missilesandexplosions/::1686105019
+::res://Assets/sfx/missilesandexplosions/::1686105182
 BIG sun explosion.wav::AudioStreamWAV::8754984989659578898::1496511586::1686105182::1::::<><>::
 bomb hit.wav::AudioStreamWAV::1575647207955061210::1496468474::1686105182::1::::<><>::
 explosion1.wav::AudioStreamWAV::1418877124572643224::1496475384::1686105182::1::::<><>::
@@ -98,7 +98,7 @@ Retro_8-Bit_Game-Bomb_Explosion_17.wav::AudioStreamWAV::2081064121765117256::149
 short enemy explosion.wav::AudioStreamWAV::8224575291260777710::1496468550::1686105182::1::::<><>::
 swoosh attack.wav::AudioStreamWAV::1542348229246960376::1496475526::1686105181::1::::<><>::
 wind attack.wav::AudioStreamWAV::2356912938523927489::1496468378::1686105181::1::::<><>::
-::res://Assets/sfx/weaponsandlaser/::1686105039
+::res://Assets/sfx/weaponsandlaser/::1686105182
 Retro_8-Bit_Game-Gun_Laser_Weapon_Shoot_Beam_01.wav::AudioStreamWAV::3307606355740695955::1496472874::1686105181::1::::<><>::
 Retro_8-Bit_Game-Gun_Laser_Weapon_Shoot_Beam_02.wav::AudioStreamWAV::8848972657032086791::1496472928::1686105181::1::::<><>::
 Retro_8-Bit_Game-Gun_Laser_Weapon_Shoot_Beam_03.wav::AudioStreamWAV::8633421334293443662::1496469296::1686105181::1::::<><>::
@@ -130,42 +130,55 @@ Retro_8-Bit_Game-Gun_Laser_Weapon_Shoot_Beam_28.wav::AudioStreamWAV::51725708335
 ::res://Assets/ui/::1684170014
 Voyager Heavy.otf::FontFile::7834373643851707834::1684170014::1684170014::1::::<><>::
 Voyager Light.otf::FontFile::6717748781354938777::1684170014::1684170014::1::::<><>::
+::res://presentation/::1686129377
+background.png::CompressedTexture2D::8274743158432013388::1683480684::1686108458::1::::<><>::
+fruit code 1.png::CompressedTexture2D::6690809985116595778::1686128480::1686128604::1::::<><>::
+fruit code 2.png::CompressedTexture2D::4553893960919184158::1686128505::1686128604::1::::<><>::
+fruit code 3.png::CompressedTexture2D::6343265738724827499::1686128292::1686128604::1::::<><>::
+Godot_v4.0.2-stable_win64_4tOWa8mfpm.png::CompressedTexture2D::425046890235113916::1686129358::1686129390::1::::<><>::
+Godot_v4.0.2-stable_win64_8HxaseAz56.png::CompressedTexture2D::2095032240596063584::1686106004::1686108458::1::::<><>::
+Godot_v4.0.2-stable_win64_Gf8VOSjp4a.png::CompressedTexture2D::6037604883825444556::1686105670::1686108458::1::::<><>::
+Godot_v4.0.2-stable_win64_JX14nU2XWG.png::CompressedTexture2D::8790315849421115348::1686105294::1686108458::1::::<><>::
+Godot_v4.0.2-stable_win64_OKdJl99MBs.png::CompressedTexture2D::5317902561681085288::1686105481::1686108458::1::::<><>::
+Godot_v4.0.2-stable_win64_QxfqrjXLpG.png::CompressedTexture2D::3782142440839524600::1686105282::1686108458::1::::<><>::
+Voyager_Heavy.otf::FontFile::4269291698995057817::1686108288::1686108458::1::::<><>::
+Voyager_Light.otf::FontFile::6587192547805051409::1686108286::1686108458::1::::<><>::
 ::res://src/::1684170014
-::res://src/Actors/::1686104888
+::res://src/Actors/::1686129326
 Actor.gd::GDScript::-1::1683480684::0::1::::Actor<>CharacterBody2D<>::
-characters_base.gd::GDScript::-1::1686104243::0::1::::<>CharacterBody2D<>::
-characters_base.tscn::PackedScene::2228246795671438836::1686104633::0::1::::<><>::res://src/Actors/characters_base.gd<>uid://be1ys54guxtva
+characters_base.gd::GDScript::-1::1686106101::0::1::::<>CharacterBody2D<>::
+characters_base.tscn::PackedScene::2228246795671438836::1686129326::0::1::::<><>::res://src/Actors/characters_base.gd<>uid://be1ys54guxtva
 Enemy.gd::GDScript::-1::1686102695::0::1::::<>CharacterBody2D<>::
-Enemy.tscn::PackedScene::6230596757265673191::1686104633::0::1::::<><>::uid://60m5tpej3g2w<>res://src/Actors/Enemy.gd<>uid://c14qh1ljl2yef<>uid://43r7tyd5miuc<>uid://bj0nr6nd23ytq
-Fruit.gd::GDScript::-1::1686104888::0::1::::<>Area2D<>::
-Fruit.tscn::PackedScene::4166104909045840516::1686104888::0::1::::<><>::res://src/Actors/Fruit.gd<>uid://b5u5330xqkshd<>uid://dtay38l58pqqp<>uid://44ob2mm8lvk2
+Enemy.tscn::PackedScene::6230596757265673191::1686129326::0::1::::<><>::uid://60m5tpej3g2w<>res://src/Actors/Enemy.gd<>uid://c14qh1ljl2yef<>uid://43r7tyd5miuc<>uid://bj0nr6nd23ytq
+Fruit.gd::GDScript::-1::1686128442::0::1::::<>Area2D<>::
+Fruit.tscn::PackedScene::4166104909045840516::1686129326::0::1::::<><>::res://src/Actors/Fruit.gd<>uid://b5u5330xqkshd<>uid://dtay38l58pqqp<>uid://44ob2mm8lvk2<>uid://cbrb6k51lva1s
 Player.gd::GDScript::-1::1683480684::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::2659499229241715043::1686104633::0::1::::<><>::uid://60m5tpej3g2w<>uid://ikj2pjdvgu82
+Player.tscn::PackedScene::2659499229241715043::1686129326::0::1::::<><>::uid://60m5tpej3g2w<>uid://ikj2pjdvgu82
 projectile.gd::GDScript::-1::1686101641::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::6718079335074368641::1686104634::0::1::::<><>::res://src/Actors/projectile.gd<>uid://b32ei4pvriwlo
-::res://src/Levels/::1686104634
-EndlessLevel.tscn::PackedScene::3539647941607092194::1686104633::0::1::::<><>::uid://bdsnc36r1j6fq<>res://EndlessLevel.gd<>res://src/Levels/Timer.gd
-Label.gd::GDScript::-1::1686098141::0::1::::<>Label<>::
+projectile.tscn::PackedScene::6718079335074368641::1686129326::0::1::::<><>::res://src/Actors/projectile.gd<>uid://b32ei4pvriwlo
+::res://src/Levels/::1686129326
+EndlessLevel.tscn::PackedScene::3539647941607092194::1686129326::0::1::::<><>::uid://bdsnc36r1j6fq<>res://EndlessLevel.gd<>res://src/Levels/Timer.gd
+Label.gd::GDScript::-1::1686126102::0::1::::<>Label<>::
 Level1.gd::GDScript::-1::1686098430::0::1::::<>Node<>::
-Level1.tscn::PackedScene::6583610098840334617::1686104633::0::1::::<><>::uid://bdsnc36r1j6fq<>uid://cu1fave5mtr5p<>res://src/Levels/Level1.gd
+Level1.tscn::PackedScene::6583610098840334617::1686129326::0::1::::<><>::uid://bdsnc36r1j6fq<>uid://cu1fave5mtr5p<>res://src/Levels/Level1.gd
 Level2.gd::GDScript::-1::1686098430::0::1::::<>Node<>::
-Level2.tscn::PackedScene::8538233581209934942::1686104633::0::1::::<><>::uid://c02fdjq5gbri4<>res://src/Levels/Level2.gd<>uid://dkawkgkdqbteq<>uid://be1ys54guxtva
+Level2.tscn::PackedScene::8538233581209934942::1686129326::0::1::::<><>::uid://c02fdjq5gbri4<>res://src/Levels/Level2.gd<>uid://dkawkgkdqbteq<>uid://be1ys54guxtva
 Level3.gd::GDScript::-1::1686098430::0::1::::<>Node<>::
-Level3.tscn::PackedScene::1190930631704629946::1686104633::0::1::::<><>::uid://dtv8pvllo5nji<>res://src/Levels/Level3.gd<>uid://cu1fave5mtr5p
+Level3.tscn::PackedScene::1190930631704629946::1686129326::0::1::::<><>::uid://dtv8pvllo5nji<>res://src/Levels/Level3.gd<>uid://cu1fave5mtr5p
 Level.gd::GDScript::-1::1686076277::0::1::::<>Node2D<>::
-Level.tscn::PackedScene::2634940426024325630::1686104633::0::1::::<><>::res://src/Levels/Level.gd<>uid://bd5jtfxsvmgxn<>uid://b8acd7adpsc2h<>res://src/Levels/LifeLabel.gd<>uid://c07dos753inof<>uid://be1ys54guxtva<>uid://c68vfovggqjms
+Level.tscn::PackedScene::2634940426024325630::1686129326::0::1::::<><>::res://src/Levels/Level.gd<>uid://bd5jtfxsvmgxn<>uid://b8acd7adpsc2h<>res://src/Levels/LifeLabel.gd<>uid://c07dos753inof<>uid://be1ys54guxtva<>uid://c68vfovggqjms<>uid://dtay38l58pqqp
 LevelManager.gd::GDScript::-1::1685925166::0::1::::<>Node<>::
 Levels.gd::GDScript::-1::1685925166::0::1::::<>Node<>::
 LifeLabel.gd::GDScript::-1::1684170014::0::1::::<>Label<>::
-projectile.tscn::PackedScene::4420372372908629339::1686104634::0::1::::<><>::res://src/Actors/projectile.gd<>uid://b32ei4pvriwlo<>uid://c68vfovggqjms
-Timer.gd::GDScript::-1::1686099325::0::1::::<>Timer<>::
+projectile.tscn::PackedScene::4420372372908629339::1686129326::0::1::::<><>::res://src/Actors/projectile.gd<>uid://b32ei4pvriwlo<>uid://c68vfovggqjms
 test_level.tscn::PackedScene::6121529142207860640::1683480684::0::1::::<><>::uid://b24iueu0bfgbw
-::res://src/Menus/::1686104633
+Timer.gd::GDScript::-1::1686099325::0::1::::<>Timer<>::
+::res://src/Menus/::1686129326
 Game_Over.gd::GDScript::-1::1686077460::0::1::::<>Node2D<>::
 Game_Over.tscn::PackedScene::8659852662907140909::1686095529::0::1::::<><>::res://src/Menus/Game_Over.gd<>uid://bynwqsv0vjgaa<>res://Game_Over.gd<>uid://dkawkgkdqbteq
 main_menu.gd::GDScript::-1::1686068862::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::1207356856251437459::1686104633::0::1::::<><>::uid://djva8vvmou1tm<>uid://c2yelue3qpvj2<>uid://dmelmnyji0uah<>uid://bue610end6vqq<>uid://dtijvw3yxblni
-::res://src/Themes/::1686098141
-enemy_hpbar.tres::Theme::2094369412094436074::1686098141::0::1::::<><>::
-hpbar2.tres::Theme::6593830694814746453::1686098141::0::1::::<><>::
+main_menu.tscn::PackedScene::1207356856251437459::1686129326::0::1::::<><>::uid://djva8vvmou1tm<>uid://c2yelue3qpvj2<>uid://dmelmnyji0uah<>uid://bue610end6vqq<>uid://dtijvw3yxblni
+::res://src/Themes/::1686126102
+enemy_hpbar.tres::Theme::2094369412094436074::1686126102::0::1::::<><>::
+hpbar2.tres::Theme::6593830694814746453::1686126102::0::1::::<><>::
 hpbar.tres::Theme::2248716809664797136::1685925166::0::1::::<><>::

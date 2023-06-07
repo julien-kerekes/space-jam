@@ -12,7 +12,7 @@ func _process(delta):
 
 func _exit_tree(): 
 	var drop = randi_range(0,100)
-	if drop > 0:
+	if drop >= 20:
 		self.jam = Jam.instantiate()
 		get_tree().current_scene.add_child.call_deferred(self.jam)
 		self.jam.global_position = Vector2(self.global_position.x ,self.global_position.y)
@@ -23,4 +23,5 @@ func _exit_tree():
 
 
 func _on_sprite_2d_tree_exiting():
-	$sfxEnemyBoom.play()
+	#$sfxEnemyBoom.play()
+	pass
